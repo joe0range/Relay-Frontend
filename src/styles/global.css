@@ -1,0 +1,81 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg:            #f5f4f0;
+  --surface:       #ffffff;
+  --surface-2:     #f9f8f5;
+  --border:        rgba(0, 0, 0, 0.08);
+  --border-md:     rgba(0, 0, 0, 0.13);
+  --text:          #1a1a18;
+  --text-2:        #56564f;
+  --text-3:        #9a9990;
+  --accent:        #1a1a18;
+  --accent-fg:     #ffffff;
+  --info-bg:       #eef4ff;
+  --info-text:     #1e4fad;
+  --success-text:  #1a7c4a;
+  --danger-bg:     #fff0f0;
+  --danger-text:   #c0392b;
+  --radius:        10px;
+  --radius-lg:     16px;
+  --shadow:        0 2px 20px rgba(0, 0, 0, 0.07);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg:            #16161a;
+    --surface:       #1e1e24;
+    --surface-2:     #252530;
+    --border:        rgba(255, 255, 255, 0.06);
+    --border-md:     rgba(255, 255, 255, 0.13);
+    --text:          #eeecea;
+    --text-2:        #9a9893;
+    --text-3:        #5a5856;
+    --accent:        #eeecea;
+    --accent-fg:     #16161a;
+    --info-bg:       #1a2a4a;
+    --info-text:     #7ba8f5;
+    --success-text:  #4fc88a;
+    --danger-bg:     #2a1a1a;
+    --danger-text:   #f07070;
+    --shadow:        0 2px 20px rgba(0, 0, 0, 0.3);
+  }
+}
+
+body {
+  font-family: 'Sora', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  font-family: 'Sora', system-ui, sans-serif;
+  cursor: pointer;
+}
+
+select {
+  font-family: 'Sora', system-ui, sans-serif;
+}
+
+textarea {
+  font-family: 'Sora', system-ui, sans-serif;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
